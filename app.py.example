@@ -1,0 +1,23 @@
+import logging
+
+from financial_tracker import configure_logging, GoogleSheetsReader, DataProcessor, FinancialVisualizer
+
+
+def main():
+    configure_logging(logging.INFO)
+
+    credentials_file = "path_to_creds_file"
+    spreadsheet_id = "your_spreadsheet_id"
+    sheet_range = "your_sheet_range"
+
+    reader = GoogleSheetsReader(credentials_file, spreadsheet_id, sheet_range)
+    
+    processor = DataProcessor(reader)
+    
+    visualizer = FinancialVisualizer(processor)
+
+    visualizer.run()
+
+if __name__ == "__main__":
+    main()
+

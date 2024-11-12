@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+/* Основные стили для темной темы */
+body {
+  background-color: #1f1f1f;
+  color: white;
+  font-family: "Roboto", Arial, sans-serif;
+  line-height: 1.6; /* Межстрочный интервал для улучшенной читаемости */
+  letter-spacing: 0.5px; /* Межбуквенный интервал */
+}
+
+.container {
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  color: white;
+  font-size: 2rem; /* Увеличиваем размер шрифта для заголовков */
+  font-weight: 700; /* Сделаем заголовок более жирным */
+  letter-spacing: 1px; /* Добавим интервал между буквами для более четкого вида */
+}
+
+/* Стили для графиков */
+.graph-container {
+  width: 100%; /* Ширина графика для адаптивности */
+  max-width: 45%; /* Максимальная ширина графика для двух графиков на одной линии */
+  padding: 10px;
+  background-color: #292929;
+  border-radius: 15px;
+  border: 1px solid #3a3a3a; /* Уменьшенная ширина границы */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+  margin: 15px; /* Отступ между графиками */
+}
+
+.graph-container:hover {
+  transform: translateY(-5px);
+}
+
+/* Стили для дропдаунов */
+.dropdown-container {
+  width: 100%; /* Ширина дропдауна для адаптивности */
+  max-width: 45%; /* Максимальная ширина дропдауна */
+  padding: 10px;
+}
+
+.dropdown-dark .Select-menu-outer,
+.dropdown-dark .Select-control {
+  background-color: #2f2f2f;
+  color: white;
+  border-radius: 8px; /* Сглаживаем углы для более аккуратного вида */
+  border: 1px solid #3a3a3a;
+  font-family: "Roboto", Arial, sans-serif; /* Используем тот же шрифт */
+  font-weight: 400; /* Нормальная толщина шрифта */
+}
+
+.dropdown-dark .Select-option {
+  background-color: #2f2f2f;
+  color: white;
+  font-weight: 400;
+}
+
+.dropdown-dark .Select-option:hover {
+  background-color: #3a3a3a;
+}
+
+.dropdown-dark .Select--multi .Select-value {
+  background-color: #2f2f2f;
+  color: white;
+}
+
+.dropdown-dark .Select-value-label {
+  color: white; /* Цвет текста выбранного значения */
+  font-weight: 500; /* Увеличиваем вес текста выбранного значения для выделения */
+}
+
+.dropdown-dark .Select-value {
+  color: white;
+}
+
+.dropdown-dark .Select-input {
+  color: white;
+}
+
+.dropdown-dark .Select-placeholder {
+  color: #cccccc;
+}
+
+.dropdown-dark .Select-arrow-zone .Select-arrow {
+  border-color: white transparent transparent;
+}
+
+/* Flex стили для контейнеров */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Обеспечиваем равномерное распределение элементов */
+}
+
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.comparison_chart {
+  background-color: #2b2b2b;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 768px) {
+  .graph-container,
+  .dropdown-container {
+    max-width: 100%; /* Для экранов меньше 768px графики и дропдауны займут всю ширину */
+  }
+
+  .flex-container {
+    flex-direction: column;
+    align-items: center; /* Центрируем элементы на мобильных устройствах */
+  }
+}
